@@ -16,13 +16,5 @@ export const WithWiderScreen: FC<WithWiderScreenProps> = ({ children, minWidth =
 
   const tooSmall = minWidth > 0 && view.width > 0 && view.width < minWidth
 
-  return tooSmall ? (
-    <Stack gap={0} className={classes.board}>
-      <IconWiderScreenRequired />
-      <Title order={1}>{t('common.content.wider.title')}</Title>
-      <Text fw="bold">{t('common.content.wider.text')}</Text>
-    </Stack>
-  ) : (
-    <>{children}</>
-  )
+  return <>{children}</>
 }
