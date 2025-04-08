@@ -210,7 +210,7 @@ const GameDetail: FC = () => {
           {t('game.button.leave')}
         </Button>
       )}
-      {status === ParticipationStatus.Accepted && started && !isMobile && (!finished || game?.practiceMode) && (
+      {status === ParticipationStatus.Accepted && started && (!finished || game?.practiceMode) && (
         <Button component={Link} to={`/games/${numId}/challenges`}>
           {t('game.button.challenges')}
         </Button>
